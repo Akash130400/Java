@@ -1,0 +1,87 @@
+task - 1 // Outer class
+public class Calculator {
+
+    // Method in the outer class to perform addition
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // Inner class
+    class Subtractor {
+
+        // Method in the inner class to perform subtraction
+        public int subtract(int a, int b) {
+            return a - b;
+        }
+    }
+
+    // Method in the outer class to display results using both outer and inner class methods
+    public void displayResults(int a, int b) {
+        // Creating an instance of the inner class
+        Subtractor subtractor = new Subtractor();
+
+        // Performing operations using the outer class and inner class methods
+        int sum = add(a, b);
+        int difference = subtractor.subtract(a, b);
+
+        // Displaying the results
+        System.out.println("Addition of " + a + " and " + b + " is: " + sum);
+        System.out.println("Subtraction of " + a + " from " + b + " is: " + difference);
+    }
+
+    // Main method to test the Calculator class
+    public static void main(String[] args) {
+        // Creating an instance of the outer class
+        Calculator calculator = new Calculator();
+
+        // Define two integers to be used in the operations
+        int num1 = 10;
+        int num2 = 5;
+
+        // Display results using the outer class method
+        calculator.displayResults(num1, num2);
+    }
+}
+
+task -2 
+
+// Abstract class Animal
+abstract class Animal {
+
+    // Abstract method sound, which must be implemented by subclasses
+    public abstract void sound();
+}
+
+// Subclass Lion extending Animal
+class Lion extends Animal {
+
+    // Implementation of the sound method for Lion
+    @Override
+    public void sound() {
+        System.out.println("The lion roars.");
+    }
+}
+
+// Subclass Tiger extending Animal
+class Tiger extends Animal {
+
+    // Implementation of the sound method for Tiger
+    @Override
+    public void sound() {
+        System.out.println("The tiger growls.");
+    }
+}
+
+// Main class to test the implementation
+public class Main {
+    public static void main(String[] args) {
+        // Create instances of Lion and Tiger
+        Animal lion = new Lion();
+        Animal tiger = new Tiger();
+
+        // Call the sound method on each instance
+        lion.sound();
+        tiger.sound();
+    }
+}
+

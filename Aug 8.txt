@@ -1,0 +1,82 @@
+public class Circle {
+    // Instance variables
+    private double radius;
+    private String color;
+
+    // Simple (default) constructor
+    public Circle() {
+        this.radius = 1.0;
+        this.color = "red";
+    }
+
+    // Parameterized constructor
+    public Circle(double radius, String color) {
+        this.radius = radius;
+        this.color = color;
+    }
+
+    // Getter methods to access the instance variables
+    public double getRadius() {
+        return radius;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    // Method to calculate the area of the circle
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+
+    // Main method to test the class
+    public static void main(String[] args) {
+        // Creating a Circle object using the simple constructor
+        Circle circle1 = new Circle();
+        System.out.println("Circle 1 - Radius: " + circle1.getRadius() + ", Color: " + circle1.getColor() + ", Area: " + circle1.getArea());
+
+        // Creating a Circle object using the parameterized constructor
+        Circle circle2 = new Circle(2.5, "blue");
+        System.out.println("Circle 2 - Radius: " + circle2.getRadius() + ", Color: " + circle2.getColor() + ", Area: " + circle2.getArea());
+    }
+}
+
+task - 2 
+
+public class Student {
+    // Instance variables
+    private String name;
+    private int rollNumber;
+    private double marks;
+
+    // Parameterized constructor
+    public Student(String name, int rollNumber, double marks) {
+        this.name = name;
+        this.rollNumber = rollNumber;
+        this.marks = marks;
+    }
+
+    // Getter methods to access the instance variables
+    public String getName() {
+        return name;
+    }
+
+    public int getRollNumber() {
+        return rollNumber;
+    }
+
+    public double getMarks() {
+        return marks;
+    }
+
+    // Main method to test the class
+    public static void main(String[] args) {
+        // Creating a Student object
+        Student student1 = new Student("John Doe", 101, 89.5);
+
+        // Accessing and printing the instance variables
+        System.out.println("Name: " + student1.getName());
+        System.out.println("Roll Number: " + student1.getRollNumber());
+        System.out.println("Marks: " + student1.getMarks());
+    }
+}
