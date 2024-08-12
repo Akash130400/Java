@@ -1,0 +1,84 @@
+public class Main {
+
+    // Static method to add two numbers
+    public static int addNumbers(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        int num1 = 5;
+        int num2 = 10;
+
+        // Call the static method and store the result
+        int sum = addNumbers(num1, num2);
+
+        // Print the result
+        System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sum);
+    }
+}
+
+TASK - 2
+
+public class Employee {
+    // Fields to store employee ID and name
+    private int employeeId;
+    private String employeeName;
+
+    // Constructor to initialize the employee object
+    public Employee(int employeeId, String employeeName) {
+        this.employeeId = employeeId;
+        this.employeeName = employeeName;
+    }
+
+    // Getter method for employee ID
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    // Getter method for employee name
+    public String getEmployeeName() {
+        return employeeName;
+    }
+}
+
+TASK - 3
+
+// Define a class named Calculator
+public class Calculator {
+
+    // Method to perform addition
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // Method to perform subtraction
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+
+    // Method to perform multiplication
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+    // Method to display the results
+    public void displayResults(int a, int b) {
+        System.out.println("Addition of " + a + " and " + b + " is: " + add(a, b));
+        System.out.println("Subtraction of " + a + " and " + b + " is: " + subtract(a, b));
+        System.out.println("Multiplication of " + a + " and " + b + " is: " + multiply(a, b));
+    }
+
+    // Main method to test the Calculator class
+    public static void main(String[] args) {
+        // Create an object of the Calculator class
+        Calculator calc = new Calculator();
+
+        // Define two integers to be used in the operations
+        int num1 = 10;
+        int num2 = 5;
+
+        // Display results using the object
+        calc.displayResults(num1, num2);
+    }
+}
+
