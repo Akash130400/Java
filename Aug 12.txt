@@ -1,9 +1,5 @@
-public class VariableExample {
-
-    // Instance variable (Non-static field)
-    int instanceVar = 10;
-
-    // Static variable (Class-level field)
+public class VariableExample {
+    int instanceVar = 10;
     static int staticVar = 20;
 
     public void demonstrateVariables() {
