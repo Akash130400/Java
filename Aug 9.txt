@@ -1,0 +1,62 @@
+class Student {
+    int id;
+    String name;
+    int age;
+    int grade;
+
+    // Constructor 1
+    Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    // Constructor 2
+    Student(int id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    // Constructor 3
+    Student(int id, String name, int age, int grade) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.grade = grade;
+    }
+
+    void display() {
+        System.out.println("ID: " + id + ", Name: " + name + ", Age: " + age + ", Grade: " + grade);
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student(1, "John");
+        Student s2 = new Student(2, "Alice", 20);
+        Student s3 = new Student(3, "Bob", 22, 3);
+
+        s1.display();
+        s2.display();
+        s3.display();
+    }
+
+TASK - 2
+
+class MathOperations {
+
+    // Method 1: Add two integers
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    // Method 2: Add two doubles
+    double add(double a, double b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        MathOperations operations = new MathOperations();
+
+        System.out.println("Sum of two integers: " + operations.add(5, 10));
+        System.out.println("Sum of two doubles: " + operations.add(5.5, 10.5));
+    }
+}

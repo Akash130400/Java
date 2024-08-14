@@ -1,0 +1,39 @@
+public class VariableExample {
+
+    // Instance variable (Non-static field)
+    int instanceVar = 10;
+
+    // Static variable (Class-level field)
+    static int staticVar = 20;
+
+    public void demonstrateVariables() {
+        // Local variable
+        int localVar = 30;
+
+        System.out.println("Instance Variable: " + instanceVar);
+        System.out.println("Static Variable: " + staticVar);
+        System.out.println("Local Variable: " + localVar);
+
+        // Modifying the variables
+        instanceVar += 10; // Modifies instance variable
+        staticVar += 10;   // Modifies static variable
+        localVar += 10;    // Modifies local variable
+
+        System.out.println("\nAfter modification:");
+        System.out.println("Instance Variable: " + instanceVar);
+        System.out.println("Static Variable: " + staticVar);
+        System.out.println("Local Variable: " + localVar);
+    }
+
+    public static void main(String[] args) {
+        // Creating an object of the class to access instance variables and methods
+        VariableExample example1 = new VariableExample();
+        VariableExample example2 = new VariableExample();
+
+        System.out.println("Before modification:");
+        example1.demonstrateVariables();
+
+        System.out.println("\nAccessing with another object:");
+        example2.demonstrateVariables();
+    }
+}
